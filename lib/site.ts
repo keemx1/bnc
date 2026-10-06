@@ -130,16 +130,14 @@ export const WHOLESALE_AUDIENCES = [
 
 export const COVERAGE: CoverageTree = {
   Nairobi: {
-    Westlands: ["Westlands Town", "Parklands", "Kitisuru"],
-    Kasarani: ["Kasarani Town", "Githurai", "Roysambu"],
+    Kawangware: ["Kabiria"],
   },
   Kiambu: {
-    Thika: ["Thika Town", "Makongeni"],
-    Ruiru: ["Ruiru Town", "Juja Farm Rd"],
+    Juja: ["Gate A", "Gate B", "Gate C", "Stage", "Carnation", "Kwa Jose", "Gachororo"],
+    Bypass: ["Digithu", "Gatongora"],
   },
-  Mombasa: {
-    Mvita: ["Mvita Town", "Tudor"],
-    Nyali: ["Nyali Town", "Bamburi"],
+  Kirinyaga: {
+    Kutus: ["Ngomongo", "D8", "Diaspora", "Kutus Town"],
   },
 };
 
