@@ -1,0 +1,10 @@
+# Netlify + Next.js: auto-detects the framework, uses this for build settings.
+# After pushing, connect the repo in Netlify and add env var:
+#   NEXT_PUBLIC_WEB3FORMS_KEY = <your web3forms access key>
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NPM_FLAGS = "--no-audit --no-fund"

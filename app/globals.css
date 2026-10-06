@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* BNC Brancom — blue-only tokens. No orange anywhere in UI. */
+:root {
+  --cyan: #0da8e5;
+  --blue: #0d82c0;
+  --navy: #061a33;
+  --navy-2: #082b52;
+  --paper: #f5fafd;
+  --line: #d7edf7;
+  --line-strong: #aedcf2;
+  --ink: #0a2138;
+  --muted: #44627e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  /* Premium light base (§1): predominantly white, fixed so glass always has wash behind it */
+  background:
+    radial-gradient(circle at 10% 20%, rgba(0, 170, 230, 0.08), transparent 30%),
+    radial-gradient(circle at 90% 8%, rgba(0, 170, 230, 0.06), transparent 28%),
+    linear-gradient(135deg, #ffffff 0%, #f4fbff 50%, #eaf7fd 100%);
+  background-attachment: fixed;
+  color: #52708a;
+  overflow-x: hidden;
+}
+::selection {
+  background: var(--cyan);
+  color: #fff;
+}
+
+/* ---------- Premium frosted-white glass (§2–§3, §7–§10) ---------- */
+.glass-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.45));
+  backdrop-filter: blur(20px) saturate(130%);
+  -webkit-backdrop-filter: blur(20px) saturate(130%);
+  border: 1.5px solid rgba(255, 255, 255, 0.75);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 20px 45px rgba(30, 120, 170, 0.1);
+  border-radius: 20px;
+}
+.glass-input {
+  background: rgba(255, 255, 255, 0.45);
+  border: 1.5px solid rgba(90, 180, 220, 0.35);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #19334d;
+  border-radius: 12px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+.glass-input:hover {
+  border-color: rgba(0, 160, 220, 0.6);
+}
+.glass-input:focus {
+  outline: none;
+  border-color: rgba(0, 160, 220, 0.6);
+  box-shadow: 0 0 0 3px rgba(0, 160, 220, 0.08);
+}
+.glass-status {
+  background: rgba(225, 247, 255, 0.55);
+  border: 1px solid rgba(70, 190, 235, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.glass-pill {
+  background: rgba(220, 246, 255, 0.55);
+  border: 1px solid rgba(70, 180, 230, 0.35);
+  color: #0877a8;
+  border-radius: 999px;
+}
+.glass-tile {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 8px 25px rgba(40, 130, 170, 0.08);
+  color: #102b45;
+  transition: all 0.18s ease;
+}
+.glass-tile:hover {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(0, 160, 220, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Blueprint grid backdrop for heroes */
+.blueprint {
+  background-image: linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+.blueprint-fade {
+  -webkit-mask-image: radial-gradient(70% 70% at 50% 30%, #000 30%, transparent 100%);
+  mask-image: radial-gradient(70% 70% at 50% 30%, #000 30%, transparent 100%);
+}
+.noc-grid-bg {
+  background-image: linear-gradient(rgba(13, 168, 229, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(13, 168, 229, 0.12) 1px, transparent 1px);
+  background-size: 36px 36px;
+  -webkit-mask-image: radial-gradient(60% 60% at 70% 20%, #000, transparent 75%);
+  mask-image: radial-gradient(60% 60% at 70% 20%, #000, transparent 75%);
+}
+
+/* Signature effect: fiber light-trail (one per screen, GPU-cheap) */
+@keyframes fiber-travel {
+  to {
+    left: 110%;
+  }
+}
+.fiber-trail {
+  position: absolute;
+  left: -20%;
+  width: 34%;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, transparent, var(--cyan));
+  animation: fiber-travel 5s linear infinite;
+  opacity: 0.8;
+}
+
+/* Ticker */
+@keyframes tick {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.ticker-track {
+  animation: tick 26s linear infinite;
+}
+
+/* Live dot + speed ring */
+@keyframes soft-pulse {
+  50% {
+    box-shadow: 0 0 0 9px rgba(13, 168, 229, 0.08);
+  }
+}
+.dot-live {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 0 5px rgba(13, 168, 229, 0.2);
+  animation: soft-pulse 2s infinite;
+}
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.speed-ring {
+  animation: spin-slow 3.5s linear infinite;
+}
+
+/* Ticket perforation edge */
+.ticket-head {
+  border-bottom: 2px dashed var(--line-strong);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
