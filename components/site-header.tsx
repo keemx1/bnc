@@ -9,20 +9,20 @@ import { NavLinks } from "./nav-links";
 export function SiteHeader() {
   return (
     <>
-      <div className="bg-[#EAF6FD]/80 backdrop-blur-md border-b border-line text-[13px]">
+      <div className="bg-navy text-[#C9E6F7] text-[13px]">
         <div className="mx-auto max-w-[1200px] px-6 flex items-center justify-between gap-4 py-2">
-          <p className="flex items-center gap-4 text-muted">
+          <p className="flex items-center gap-4">
             <span>Kenya</span>
             <span aria-hidden="true" className="w-1 h-1 rounded-full bg-cyan" />
-            <a href={`mailto:${SITE.email}`} className="text-navy hover:text-brand hover:underline">
+            <a href={`mailto:${SITE.email}`} className="text-[#E7F5FD] hover:text-white hover:underline">
               {SITE.email}
             </a>
-            <a href={SITE.phoneHref} className="hidden sm:inline text-navy hover:text-brand hover:underline">
+            <a href={SITE.phoneHref} className="hidden sm:inline text-[#E7F5FD] hover:text-white hover:underline">
               {SITE.phoneDisplay}
             </a>
           </p>
           <p className="flex items-center gap-4">
-            <Link href="/support" className="text-navy hover:text-brand hover:underline">
+            <Link href="/support" className="text-[#E7F5FD] hover:text-white hover:underline">
               Support
             </Link>
           </p>

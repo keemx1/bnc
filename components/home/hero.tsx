@@ -94,7 +94,7 @@ export function Hero() {
 export function Ticker() {
   const items = "FAST • STABLE • UNLIMITED • HOME FIBER • BUSINESS • WHOLESALE FROM KSH 161/MBPS • CCTV • ";
   return (
-    <div className="bg-white/60 backdrop-blur-md border-y border-white/70 text-navy overflow-hidden" aria-hidden="true">
+    <div className="bg-navy text-[#DFF2FD] overflow-hidden border-y border-[#0E3A66]" aria-hidden="true">
       <div className="ticker-track flex whitespace-nowrap py-[13px] font-mono text-[12.5px] tracking-[0.24em] font-bold w-max">
         <span className="px-0">{items.repeat(3)}</span>
         <span className="px-0">{items.repeat(3)}</span>
