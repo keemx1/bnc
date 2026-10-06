@@ -32,10 +32,10 @@ export function SiteHeader() {
         <div className="mx-auto max-w-[1200px] px-6 flex items-center justify-between gap-5 h-[78px]">
           <Link href="/" className="flex items-center gap-3" aria-label="BNC Brancom home">
             <Image
-              src="/bnclogo.jpeg"
+              src="/bnclogo.png"
               alt="BNC Brancom"
-              width={1165}
-              height={782}
+              width={610}
+              height={409}
               priority
               className="h-12 sm:h-14 w-auto rounded-md"
             />

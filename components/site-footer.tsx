@@ -9,7 +9,7 @@ export function SiteFooter() {
       <div className="mx-auto max-w-[1200px] px-6 grid gap-9 py-16 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
           <Link href="/" aria-label="BNC Brancom home" className="inline-block">
-            <Image src="/bnclogo.jpeg" alt="BNC Brancom" width={1165} height={782} className="h-14 w-auto" />
+            <Image src="/bnclogo.png" alt="BNC Brancom" width={610} height={409} className="h-14 w-auto" />
           </Link>
           <p className="font-mono text-[11px] tracking-[0.24em] text-brand mt-3 mb-4">
             YOUR DIGITAL BRIDGE
