@@ -6,3 +6,5 @@ out/
 dev.log
 .env
 .env*.local
+
+tsconfig.tsbuildinfo
